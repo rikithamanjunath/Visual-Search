@@ -27,6 +27,7 @@ We have the application files and the input and output files all moved to HPC  w
 │     ├── Baseline_Model_mobilenet.ipynb
 │     ├── Category_Prediction_Mobilenet.py
 │     ├── Cosine_mobile.py
+│     ├── SGD_Model.z
 ├── KMeans
 │     ├── Baseline_Model_mobilenet.ipynb
 │     ├── KMeans_Mobile.py

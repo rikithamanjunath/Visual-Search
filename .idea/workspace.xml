@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b81851ff-5a61-428a-8b59-bcff97ef6ac0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/HPC/FinalModel-Cosine/SGD_Model.z" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,8 +18,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="255">
-                <caret line="145" column="37" lean-forward="false" selection-start-line="145" selection-start-column="37" selection-end-line="145" selection-end-column="37" />
+              <first_editor relative-caret-position="374">
+                <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -70,6 +69,17 @@
               <item name="Visual-Search" type="b2602c69:ProjectViewProjectNode" />
               <item name="Visual-Search" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Visual-Search" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Visual-Search" type="462c0819:PsiDirectoryNode" />
+              <item name="HPC" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Visual-Search" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Visual-Search" type="462c0819:PsiDirectoryNode" />
+              <item name="HPC" type="462c0819:PsiDirectoryNode" />
+              <item name="FinalModel-Cosine" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -79,6 +89,11 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="pyconsole" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/HPC/FinalModel-Cosine" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -150,8 +165,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="145" column="37" lean-forward="false" selection-start-line="145" selection-start-column="37" selection-end-line="145" selection-end-column="37" />
+          <first_editor relative-caret-position="374">
+            <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
             <folding />
           </first_editor>
           <second_editor />
