@@ -1,0 +1,48 @@
+apiVersion: apps/v1 # for versions before 1.8.0 use apps/v1beta1
+kind: Deployment
+metadata:
+  name: visualsearch-spark-deployment
+spec:
+  selector:
+    matchLabels:
+      app: visualsearch-spark
+  replicas: 1 # tells deployment to run 2 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: visualsearch-spark
+    spec:
+      containers:
+      - name: visualsearch-spark
+        image: gcr.io/visualsearch-232720/sjsu/spring/2019/295:visualsearch-spark
+        command: ["/bin/sh","-c"]
+        args:  ["-e JUPYTER_ENABLE_LAB=yes "]
+        ports:
+        - containerPort: 8888
+        securityContext:
+          privileged: true
+          capabilities:
+            add:
+              - SYS_ADMIN
+        lifecycle:
+          postStart:
+            exec:
+              command: ["gcsfuse", "-o", "nonempty,rw,allow_other","--implicit-dirs","--file-mode","777","--dir-mode","777", "visualsearch-image-bucket", "/home/jovyan/work"]
+          preStop:
+            exec:
+              command: ["fusermount", "-u", "/visual"]
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: visualsearch-spark-service
+  labels:
+    app: visualsearch-spark
+spec:
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 8888
+    targetPort: 8888
+  selector:
+    app: visualsearch-spark
