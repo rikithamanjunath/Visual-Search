@@ -20,31 +20,93 @@ We have the application files and the input and output files all moved to HPC  w
 #### Repository structure
 ```bash
 ├── FinalModel-Cosine
-│     ├── query_images
-│     ├── Semi_images
-│     ├── Semi_train
-│     ├── model_mobilenet_semi.z
-│     ├── Baseline_Model_mobilenet.ipynb
-│     ├── Category_Prediction_Mobilenet.py
-│     ├── Cosine_mobile.py
-│     ├── SGD_Model.z
+│      ├── images
+│        ├── query_images
+│        ├── Semi_images
+│        ├── Semi_trian
+│      ├──Pickles
+│          ├── features_mnet
+│      ├── model_mobilenet_semi.z
+│      ├── Baseline_Model_mobilenet.ipynb
+│      ├── Category_Prediction_Mobilenet.py
+│      ├── Cosine_mobile.py
+│      ├── SGD_Model.z
 ├── KMeans
 │     ├── Baseline_Model_mobilenet.ipynb
 │     ├── KMeans_Mobile.py
 │     ├── Category_Prediction_Mobilenet.py
 ├── Baseline Model
+│      ├── images
+│        ├── query_images
+│        ├── Semi_images
+│        ├── Semi_trian
+│      ├──Pickles
+│          ├── features_mnet
+│      ├── model.h5
+│      ├── model_cnn_semi.json
+│      ├── Baseline_Model.ipynb
+│      ├── Category_Prediction.py
+│      ├── MobileNet.py 
 │    
 ├── Graph code
 │     ├── Graph_Charts.ipynb
 
 ```
 #### Steps to Run
-#####Steps to run Final Model : FinalModel- Cosine
+####Steps to run Final Model
+   
+Go to the HPC/FinalModel- Cosine directory
+```bash
+1. You can pick one of the query image (input image) from the path below and place it in the FinalModel-Cosine/images/query_images folder
 
-1. FinalModel_Cosine
-   (i) Open the Baseline_Model_mobilenet.ipynb, change all the paths
-   (ii) Run the Baseline_Model_mobilenet.ipynb to retrieve the recommendations.
+2. Download all these folders Semi_images, Semi_train and pickle files from the below link and place all the files in their respective folder paths
+    https://drive.google.com/drive/u/1/folders/19lpENmOWaOXnYP8ouwBgf9l68qFrmFKx
     
+2. Baseline_Model_mobilenet.ipynb is the main file to be executed. In order to execute this file, following files should be in the same current path
+    model_mobilenet_semi.z : model file
+    SGD_model.z : SGD model file
+    Category_Prediction_Mobilenet.py : category prediction file
+    Cosine_mobile.py : image similarity file
+    
+3. Change all the paths in the Baseline_Model_mobilenet.ipynb with their respective current paths
+    model_path  : ./HPC/FinalModel-Cosine/model_mobilenet_semi.z
+    image_path  : ./HPC/FinalModel-Cosine/images/Semi_images
+    train_path  : ./HPC/FinalModel-Cosine/images/Semi_trian
+    query_path  : ./HPC/FinalModel-Cosine/images/query_images
+    pickle_path : ./HPC/FinalModel-Cosine/Pickles/features_mnet
+
+4. Run the Baseline_Model_mobilenet.ipynb to retrieve final recommendations for the input query image
+```  
+####Steps to run Baseline Model
+
+Go to the HPC/Baseline Model directory
+```bash
+1. You can pick one of the query image (input image) from the path below and place it in the Baseline Model/images/query_images folder
+
+2. Download all these folders model.h5, model_cnn_semi.json, Semi_images, Semi_train and pickle files from the below link and place all the files in their respective folder paths
+    https://drive.google.com/drive/u/1/folders/1A6AtMd0SUnqZkyVsNaWAK6tShWsmmGdV
+    
+2. Baseline_Model.ipynb is the main file to be executed. In order to execute this file, following files should be in the same current path
+     model_cnn_semi.json : model file
+     model.h5 : model weights file
+     Category_Prediction.py : category prediction file
+     MobileNet.py : image similarity file
+    
+3. Change all the paths in the Baseline_Model_mobilenet.ipynb with their respective current paths
+    json_path   : ./HPC/Baseline Model/model_cnn_semi.json
+    model_path  : ./HPC/Baseline Model/model.h5
+    image_path  : ./HPC/Baseline Model/images/Semi_images
+    train_path  : ./HPC/Baseline Model/images/Semi_trian
+    query_path  : ./HPC/Baseline Model/images/query_images
+    pickle_path : ./HPC/Baseline Model/Pickles/features_mnet
+
+4. Run the Baseline_Model_mobilenet.ipynb to retrieve final recommendations for the input query image
+
+```  
+####Steps to run KMeans Model
+```bash
+Similarly place all the folders and change the paths, and run the Baseline_Model_mobilenet.ipynb
+```
 Graph codes are in Graph_Charts.ipynb for all the models 
 
 ## Deployment to GCP
