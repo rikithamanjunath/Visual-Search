@@ -53,7 +53,7 @@ We have the application files and the input and output files all moved to HPC  w
 
 ```
 #### Steps to Run
-####Steps to run Final Model
+#### Steps to run Final Model
    
 Go to the HPC/FinalModel- Cosine directory
 ```bash
@@ -77,7 +77,7 @@ Go to the HPC/FinalModel- Cosine directory
 
 4. Run the Baseline_Model_mobilenet.ipynb to retrieve final recommendations for the input query image
 ```  
-####Steps to run Baseline Model
+#### Steps to run Baseline Model
 
 Go to the HPC/Baseline Model directory
 ```bash
