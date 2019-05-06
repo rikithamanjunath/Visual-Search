@@ -1,0 +1,4 @@
+files/notebook/*.h5
+files/notebook/model.h5
+files/notebook/.ipynb_checkpoints
+.idea/*
