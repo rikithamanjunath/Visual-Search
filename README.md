@@ -10,7 +10,7 @@
      * [terraform-modules](#terraform-modules)
      * [my-cluster](#my-cluster)
      * [Steps to Run]()
- 
+* Sample Recommendations
 
 ## Deployment to HCP
 
@@ -55,27 +55,27 @@ We have the application files and the input and output files all moved to HPC  w
 #### Steps to Run
 #### Steps to run Final Model
    
-Go to the HPC/FinalModel- Cosine directory
+Go to HPC/FinalModel- Cosine directory
 ```bash
 1. You can pick one of the query image (input image) from the path below and place it in the FinalModel-Cosine/images/query_images folder
 
 2. Download all these folders Semi_images, Semi_train and pickle files from the below link and place all the files in their respective folder paths
     https://drive.google.com/drive/u/1/folders/19lpENmOWaOXnYP8ouwBgf9l68qFrmFKx
     
-2. Baseline_Model_mobilenet.ipynb is the main file to be executed. In order to execute this file, following files should be in the same current path
+3. Baseline_Model_mobilenet.ipynb is the main file to be executed. In order to execute this file, following files should be in the same current path
     model_mobilenet_semi.z : model file
     SGD_model.z : SGD model file
     Category_Prediction_Mobilenet.py : category prediction file
     Cosine_mobile.py : image similarity file
     
-3. Change all the paths in the Baseline_Model_mobilenet.ipynb with their respective current paths
+4. Change all the paths in the Baseline_Model_mobilenet.ipynb with their respective current paths
     model_path  : ./HPC/FinalModel-Cosine/model_mobilenet_semi.z
     image_path  : ./HPC/FinalModel-Cosine/images/Semi_images
     train_path  : ./HPC/FinalModel-Cosine/images/Semi_trian
     query_path  : ./HPC/FinalModel-Cosine/images/query_images
     pickle_path : ./HPC/FinalModel-Cosine/Pickles/features_mnet
 
-4. Run the Baseline_Model_mobilenet.ipynb to retrieve final recommendations for the input query image
+5. Run the Baseline_Model_mobilenet.ipynb to retrieve final recommendations for the input query image
 ```  
 #### Steps to run Baseline Model
 
@@ -86,13 +86,13 @@ Go to the HPC/Baseline Model directory
 2. Download all these folders model.h5, model_cnn_semi.json, Semi_images, Semi_train and pickle files from the below link and place all the files in their respective folder paths
     https://drive.google.com/drive/u/1/folders/1A6AtMd0SUnqZkyVsNaWAK6tShWsmmGdV
     
-2. Baseline_Model.ipynb is the main file to be executed. In order to execute this file, following files should be in the same current path
+3. Baseline_Model.ipynb is the main file to be executed. In order to execute this file, following files should be in the same current path
      model_cnn_semi.json : model file
      model.h5 : model weights file
      Category_Prediction.py : category prediction file
      MobileNet.py : image similarity file
     
-3. Change all the paths in the Baseline_Model_mobilenet.ipynb with their respective current paths
+4. Change all the paths in the Baseline_Model_mobilenet.ipynb with their respective current paths
     json_path   : ./HPC/Baseline Model/model_cnn_semi.json
     model_path  : ./HPC/Baseline Model/model.h5
     image_path  : ./HPC/Baseline Model/images/Semi_images
@@ -100,10 +100,12 @@ Go to the HPC/Baseline Model directory
     query_path  : ./HPC/Baseline Model/images/query_images
     pickle_path : ./HPC/Baseline Model/Pickles/features_mnet
 
-4. Run the Baseline_Model_mobilenet.ipynb to retrieve final recommendations for the input query image
+5. Run the Baseline_Model_mobilenet.ipynb to retrieve final recommendations for the input query image
 
 ```  
 ####Steps to run KMeans Model
+
+Go to the HPC/KMeans directory
 ```bash
 Similarly place all the folders and change the paths, and run the Baseline_Model_mobilenet.ipynb
 ```
@@ -202,12 +204,14 @@ It has 4 subdirectories inside:
 
 Go to the cluster directory, execute the steps 
 1. Bring Up a Cluster : Infrastructure Orchestrator 
+   Go to the directory where google sdk is downloaded
     ```bash 
-    /Users/narendrabidari/Documents/software/terraform apply -lock=false
+    ./terraform apply -lock=false
     ```
 2. Specify to Use my gcp account : Store the ssh key in Path for use by terraform :
+   Go the directory where account.json is placed
     ```bash 
-    export GOOGLE_APPLICATIONS_CREDENTIALS="/Users/narendrabidari/rikitha-git/visualsearch-terraform/accounts/account.json"
+    export GOOGLE_APPLICATIONS_CREDENTIALS="./visualsearch-terraform/accounts/account.json"
     ```
 3. Validate my Key and get cluster details 
     ```bash 
@@ -222,7 +226,12 @@ Go to the cluster directory, execute the steps
     kubectl get services
     ```
 6. Get my pods:
-  ```bash 
+    ```bash 
     kubectl get pods
-  ```
+    ```
+
+## Sample Recommendations
+
+![C](Top1.png)<br/>
+
 
