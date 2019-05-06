@@ -21,11 +21,11 @@ We have the application files and the input and output files all moved to HPC  w
 ```bash
 ├── FinalModel-Cosine
 │      ├── images
-│        ├── query_images
-│        ├── Semi_images
-│        ├── Semi_trian
+│      │    ├── query_images
+│      │    ├── Semi_images
+│      │    ├── Semi_trian
 │      ├──Pickles
-│          ├── features_mnet
+│      │     ├── features_mnet
 │      ├── model_mobilenet_semi.z
 │      ├── Baseline_Model_mobilenet.ipynb
 │      ├── Category_Prediction_Mobilenet.py
@@ -37,11 +37,11 @@ We have the application files and the input and output files all moved to HPC  w
 │     ├── Category_Prediction_Mobilenet.py
 ├── Baseline Model
 │      ├── images
-│        ├── query_images
-│        ├── Semi_images
-│        ├── Semi_trian
+│      │  ├── query_images
+│      │  ├── Semi_images
+│      │  ├── Semi_trian
 │      ├──Pickles
-│          ├── features_mnet
+│      │    ├── features_mnet
 │      ├── model.h5
 │      ├── model_cnn_semi.json
 │      ├── Baseline_Model.ipynb
@@ -103,7 +103,7 @@ Go to the HPC/Baseline Model directory
 5. Run the Baseline_Model_mobilenet.ipynb to retrieve final recommendations for the input query image
 
 ```  
-####Steps to run KMeans Model
+#### Steps to run KMeans Model
 
 Go to the HPC/KMeans directory
 ```bash
@@ -211,11 +211,11 @@ Go to the cluster directory, execute the steps
 2. Specify to Use my gcp account : Store the ssh key in Path for use by terraform :
    Go the directory where account.json is placed
     ```bash 
-    export GOOGLE_APPLICATIONS_CREDENTIALS="./visualsearch-terraform/accounts/account.json"
+    export GOOGLE_APPLICATIONS_CREDENTIALS="./project_path/accounts/account.json"
     ```
 3. Validate my Key and get cluster details 
     ```bash 
-    gcloud container clusters get-credentials visualsearch-cluster1 --zone us-west1-b --project visualsearch-232720
+    gcloud container clusters get-credentials visualsearch-cluster1 --zone us-west1-b --project projectName-232720
     ```
 4. Ask Kubernetes to orchestrate the docker image
     ```bash 
