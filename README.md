@@ -21,9 +21,9 @@ We have the application files and the input and output files all moved to HPC  w
 ```bash
 ├── FinalModel-Cosine
 │      ├── images
-│      │    ├── query_images
-│      │    ├── Semi_images
-│      │    ├── Semi_trian
+│      │     ├── query_images
+│      │     ├── Semi_images
+│      │    
 │      ├──Pickles
 │      │     ├── features_mnet
 │      ├── model_mobilenet_semi.z
@@ -32,16 +32,16 @@ We have the application files and the input and output files all moved to HPC  w
 │      ├── Cosine_mobile.py
 │      ├── SGD_Model.z
 ├── KMeans
-│     ├── Baseline_Model_mobilenet.ipynb
-│     ├── KMeans_Mobile.py
-│     ├── Category_Prediction_Mobilenet.py
+│      ├── Baseline_Model_mobilenet.ipynb
+│      ├── KMeans_Mobile.py
+│      ├── Category_Prediction_Mobilenet.py
 ├── Baseline Model
 │      ├── images
-│      │  ├── query_images
-│      │  ├── Semi_images
-│      │  ├── Semi_trian
+│      │     ├── query_images
+│      │     ├── Semi_images
+│      │  
 │      ├──Pickles
-│      │    ├── features_mnet
+│      │     ├── features_mnet
 │      ├── model.h5
 │      ├── model_cnn_semi.json
 │      ├── Baseline_Model.ipynb
@@ -59,7 +59,7 @@ Go to HPC/FinalModel- Cosine directory
 ```bash
 1. You can pick one of the query image (input image) from the path below and place it in the FinalModel-Cosine/images/query_images folder
 
-2. Download all these folders Semi_images, Semi_train and pickle files from the below link and place all the files in their respective folder paths
+2. Download all these folders Semi_images , pickle files from the below link and place all the files in their respective folder paths
     https://drive.google.com/drive/u/1/folders/19lpENmOWaOXnYP8ouwBgf9l68qFrmFKx
     
 3. Baseline_Model_mobilenet.ipynb is the main file to be executed. In order to execute this file, following files should be in the same current path
@@ -71,7 +71,6 @@ Go to HPC/FinalModel- Cosine directory
 4. Change all the paths in the Baseline_Model_mobilenet.ipynb with their respective current paths
     model_path  : ./HPC/FinalModel-Cosine/model_mobilenet_semi.z
     image_path  : ./HPC/FinalModel-Cosine/images/Semi_images
-    train_path  : ./HPC/FinalModel-Cosine/images/Semi_trian
     query_path  : ./HPC/FinalModel-Cosine/images/query_images
     pickle_path : ./HPC/FinalModel-Cosine/Pickles/features_mnet
 
@@ -96,7 +95,6 @@ Go to the HPC/Baseline Model directory
     json_path   : ./HPC/Baseline Model/model_cnn_semi.json
     model_path  : ./HPC/Baseline Model/model.h5
     image_path  : ./HPC/Baseline Model/images/Semi_images
-    train_path  : ./HPC/Baseline Model/images/Semi_trian
     query_path  : ./HPC/Baseline Model/images/query_images
     pickle_path : ./HPC/Baseline Model/Pickles/features_mnet
 
